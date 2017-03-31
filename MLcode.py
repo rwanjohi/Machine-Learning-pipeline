@@ -59,7 +59,7 @@ print( "*"*100 )
 ##--------------------------------------------------------------------------------------------------------------------------
 
 
-## split data (stratified sampling can be used incase of skewed data)
+
 def MLPipe(df, Models, Grids, names, train_prop, df2):
     print( "\n**************************************************************" )   
     print( " Lets have some fun!!  ")
@@ -113,7 +113,7 @@ def MLPipe(df, Models, Grids, names, train_prop, df2):
     # Keep relevant columns
     selectedcols = ["Label", "Features"] + df.columns
     dataset = dataset.select(selectedcols)
-    ### Split data, randomly, into training and test sets. Stratified sampling highly recommended,for skewed data
+    ### Split data, randomly, into training and test sets. Stratified sampling is highly recommended,for skewed data
     print('\nSplit dataset into training and testing sets...')
     training, testing = dataset.randomSplit([train_prop, (1-train_prop)])
     ## Deployment 
