@@ -70,14 +70,14 @@ def MLPipe(df, Models, Grids, names, train_prop, df2):
 
     print ('\nProcess Started on {}'.format(started))
     print( "*"*100 ) 
-    ## We assume that your target varible is in the last column!! if not adjust the following lines
+    ## Assumption:: Your target varible is in the last column!! if not, adjust the following lines
     Cols = df.columns[:-1]
     Target = df.columns[-1]
 
 
     lw = 20
     print(" "*lw + '..Vectorizing Categorical Variables...\n')
-    ## Assumption below: That we are using all the categorical and numerical variables in our modeling process. If not adjust the following 2 lines 
+    ## Assumption:: All the categorical and numerical variables will be used in the modeling process. If not, adjust the following 2 lines 
     categorical_features = [t[0] for t in df.dtypes if t[1] == 'string' and t[0] !=  df.columns[-1]]
     numeric_features = [t[0] for t in df.dtypes if t[1] == 'int' or t[1] == 'double' or t[1] == 'bigint' and t[0] !=  df.columns[-1] ]
     
