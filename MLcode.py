@@ -5,14 +5,14 @@ from pyspark.ml.feature import IndexToString, StringIndexer, VectorIndexer,Vecto
 from pyspark.ml.feature import  StringIndexer, OneHotEncoder
 from pyspark.ml.tuning import CrossValidator, ParamGridBuilder
 from pyspark.ml.evaluation import MulticlassClassificationEvaluator
-from pyspark.ml.classification import DecisionTreeClassifier as   DT      # decision tree
-from pyspark.ml.classification import RandomForestClassifier              # Random Forest, ofcourse
-from pyspark.ml.classification import MultilayerPerceptronClassifier      # feedforward artificial neural network
-from pyspark.ml.classification import GBTClassifier                       # gradient-boosted tree 
-from pyspark.ml.classification import NaiveBayes                          # naive bayes
+from pyspark.ml.classification import DecisionTreeClassifier              # Decision tree
+from pyspark.ml.classification import RandomForestClassifier              # Random Forest
+from pyspark.ml.classification import MultilayerPerceptronClassifier      # Feedforward Artificial Neural network
+from pyspark.ml.classification import GBTClassifier                       # Gradient-boosted tree 
+from pyspark.ml.classification import NaiveBayes                          # Naive bayes
 from pyspark.ml.regression import LinearRegression
 from pyspark.ml.regression import LinearRegression                        # Regression problem
-from pyspark.ml.classification import LogisticRegression                  # logistic regression
+from pyspark.ml.classification import LogisticRegression                  # Logistic regression
 from pyspark.ml.feature import PCA                                        # Principal Components Analysis 
 from pyspark.ml.evaluation import BinaryClassificationEvaluator
 from pyspark.ml.evaluation import MulticlassClassificationEvaluator
