@@ -61,7 +61,7 @@ print( "*"*100 )
 
 
 
-def MLPipe(df, Models, Grids, names, train_prop, df2):
+def MLPipe(df, Models, Grids, names, train_prop, df2 = None):
     print( "\n**************************************************************" )   
     print( " Lets have some fun!!  ")
     print( "\n \n**************************************************************\n" ) 
@@ -118,7 +118,7 @@ def MLPipe(df, Models, Grids, names, train_prop, df2):
     print('\nSplit dataset into training and testing sets...')
     training, testing = dataset.randomSplit([train_prop, (1-train_prop)])
     ## Deployment 
-    if df2 != '':
+    if df2 is not None:
         stages.remove(stages[0])
 
         pipe1 = Pipeline(stages = stages)
@@ -199,7 +199,7 @@ def MLPipe(df, Models, Grids, names, train_prop, df2):
         print ('='*100)
         print ('\n')
         ## deployment
-        if df2 != '':
+        if df2 is not None:
             print ('Deployment!')
             newPreds = bestModel.transform(NewSets)
             vector_udf = udf(lambda vector: float(vector[0]), DoubleType())
